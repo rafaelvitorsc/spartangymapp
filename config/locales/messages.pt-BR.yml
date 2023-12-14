@@ -1,0 +1,10 @@
+'pt-BR':
+  messages:
+    confirm_with: Deseja realmente exluir (<b>%{item}</b>)?
+    listing: Listando %{model}
+    editing: Editando %{model}
+    new: Novo %{model}
+    viewing: Visualizando %{model}
+    personal: Instrutor
+    user: Aluno
+    welcome: Seja Bem-Vindo

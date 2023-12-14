@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACADEMIA SPARTAN GYM</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body style="margin:70px">
+    <%= yield %>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-black fixed-top">
+    
+    <div class="container-fluid">        
+        
+        <a class="nav-link" style="text-align:center;"><%= link_to "ACADEMIA SPARTAN GYM", site_welcome_index_path %></a>       
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        
+        </button>
+        
+        <div class="offcanvas offcanvas-end text-bg-secondary" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        
+        <div class="offcanvas-header"">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MENU DO INSTRUTOR</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            
+            </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <img src="https://cdn-icons-png.flaticon.com/128/5951/5951752.png" style="width:20%" alt="LogoPerfil">
+                        <%= link_to "Home", admins_backoffice_welcome_index_path, class:"nav-link active" %>
+                     
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Minha Conta</a>
+                        
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item"><%= link_to "Meus Dados", users_backoffice_profile_path, class:"nav-link" %></a></li>
+                            <li><a class="dropdown-item"><%= link_to "Editar Meus Dados", users_backoffice_profile_path, class:"nav-link" %></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item"><%= link_to "Cancelar minha conta", users_backoffice_profile_path, class:"nav-link" %></a></li>                                                     
+                        </ul>
+
+                        <%= link_to "Pagamentos", new_users_backoffice_payment_path, class:"nav-link active" %>  
+                        <%= link_to "Frequência", new_users_backoffice_frequency_path, class:"nav-link active" %>                  
+                        <%= link_to "Treinos", new_users_backoffice_training_path, class:"nav-link active" %>
+                        <%= link_to "Avaliações", new_users_backoffice_exam_path, class:"nav-link active" %>
+                        <%= link_to "Eventos", new_users_backoffice_event_path, class:"nav-link active" %>
+                        <%= link_to "Pedidos", new_users_backoffice_shopping_path, class:"nav-link active" %>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="index.php?pg=produtos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Loja Virtual</a>
+                        
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item">
+                        <%= link_to "Suplementos", users_backoffice_products_path, class:"nav-link active" %>
+                        </a></li>
+                        <li><a class="dropdown-item">
+                        <%= link_to "Roupas", new_users_backoffice_product_path, class:"nav-link active" %>
+                        </a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item">
+                        <%= link_to "Promoção Fim de Ano", new_users_backoffice_product_path, class:"nav-link active" %>
+                        </a>
+                        </li>
+                        </ul>
+                        
+                        <%= link_to "Instrutores", admins_backoffice_admins_path, class:"nav-link active" %>
+                        <%= link_to "Alunos", users_backoffice_users_path, class:"nav-link active" %>
+                        <%= link_to 'Sair', destroy_admin_session_path, data: { turbo_method: :delete } %>
+
+                </li>  
+            
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Digite aqui" aria-label="Search">
+                <button class="btn btn-success" type="submit">Buscar</button>
+                    
+                </form>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    </nav>
+    <main>
+         <div class = "container-fluid">
+                
+        </div>
+        
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+   
+</body>
+</html>

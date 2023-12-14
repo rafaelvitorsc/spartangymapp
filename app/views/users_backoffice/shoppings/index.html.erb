@@ -1,0 +1,42 @@
+<div class="row">
+<div class="col-lg-12">
+<h1 class="page-header"><%= t('messages.listing', model: @shoppings.model_name.human(count: @shoppings.count)) %></h1>
+</div>
+</div>
+
+<table class="table table-dark table-hover">
+<thead>
+<tr>
+<th scope="col"><%= translate_attribute(@shoppings, :data) %></th>
+<th scope="col"><%= translate_attribute(@shoppings, :value) %></th>
+<th scope="col"><%= translate_attribute(@shoppings, :tipo) %></th>
+
+
+<th scope="col">
+<%= link_to "Voltar", users_backoffice_welcome_index_path, class:"btn btn-success" %>
+
+</th>
+</tr>
+</thead>
+<tbody>
+<% @shoppings.each do |shopping| %>
+<tr>
+<th scope="row"><%= shopping.data %></th>
+<td><%= shopping.value %></td>
+<td><%= shopping.tipo %></td>
+
+
+<td style="width:100px">
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+<%= link_to "Visualizar", edit_users_backoffice_shopping_path(shopping), class:"btn btn-primary" %>
+
+</div>
+</td>
+</tr>
+<% end %>
+</tbody>
+</table>
+
+<%= paginate @shoppings%>
+
+
