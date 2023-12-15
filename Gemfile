@@ -48,8 +48,6 @@ gem 'gentelella-rails'
 gem 'faker'
 gem 'kaminari'
 gem 'kaminari-i18n'
-gem 'bootstrap'
-gem 'bootstrap'
 gem 'cocoon'
 
 # Use Sass to process CSS
