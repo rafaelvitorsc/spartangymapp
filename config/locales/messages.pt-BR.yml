@@ -5,6 +5,6 @@
     editing: Editando %{model}
     new: Novo %{model}
     viewing: Visualizando %{model}
-    personal: Instrutor
+    instructor: Instrutor
     user: Aluno
     welcome: Seja Bem-Vindo
