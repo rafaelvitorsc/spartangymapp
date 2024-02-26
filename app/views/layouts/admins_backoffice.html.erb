@@ -90,6 +90,8 @@
                         
                         <%= link_to "Instrutores", admins_backoffice_admins_path, class:"nav-link active" %>
                         <%= link_to "Alunos", users_backoffice_users_path, class:"nav-link active" %>
+                          <%= link_to "Assuntos/Áreas", admins_backoffice_subjects_path, class:"nav-link active" %>
+                        <%= link_to "Perguntas", admins_backoffice_questions_path, class:"nav-link active" %>
                         <%= link_to 'Sair', destroy_admin_session_path, data: { turbo_method: :delete } %>
 
                 </li>  
